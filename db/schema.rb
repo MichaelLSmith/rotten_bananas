@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 2) do
 
   create_table "movies", force: true do |t|
     t.string   "director"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 1) do
     t.time     "running_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "reviews_id"
   end
 
   create_table "reviews", force: true do |t|
@@ -34,6 +36,8 @@ ActiveRecord::Schema.define(version: 1) do
 
   create_table "users", force: true do |t|
     t.string   "username"
+    t.string   "firstname"
+    t.string   "lastname"
     t.string   "email"
     t.string   "password"
     t.datetime "created_at"
