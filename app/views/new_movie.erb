@@ -1,0 +1,52 @@
+ <form class="form-inline" method="POST" action="/new_movie">
+
+   <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" required class="form-control" id="title" placeholder="Title">
+  </div>
+
+ <div class="form-group">
+    <label for="director">Director</label>
+    <input type="text" class="form-control" id="director" name="director" placeholder="Director">
+  </div>
+
+ <textarea class="form-control" placeholder="Type summary here!" name="summary" rows="5"></textarea> 
+
+  <div class="form-group">
+    <label for="summary">Summary</label>
+    <input type="text" class="form-control" id="summary" name="summary" placeholder="Summary">
+  </div>
+
+ <div class="form-group">
+    <label for="poster_image">Movie Image</label>
+    <input type="file" id="poster_image">
+    <p class="help-block">Upload accompanying movie image.</p>
+  </div>
+
+  <div class="form-group"> 
+    <label for="lead_actor">Lead Actor</label>
+    <input type="text" class="form-control" name="lead_actor" id="lead_actor" placeholder="Lead actor">
+  </div>
+
+<div class="form-group"> 
+    <label for="supporting_actor">Supporting Actor</label>
+    <input type="text" class="form-control" name="supporting_actor" id="supporting_actor" placeholder="Supporting actor">
+  </div>
+
+<div class="form-group"> 
+    <label for="genre">Genre</label>
+    <input type="text" class="form-control" name="genre" id="genre" placeholder="genre">
+  </div>
+
+<div class="form-group"> 
+    <label for="running_time">Running Time (ex: 127 mins)</label>
+    <input type="text" class="form-control" name="running_time" id="running_time" placeholder="ex: 123 mins">
+  </div>
+
+<div class="form-group"> 
+    <label for="release_year">Year of Release (ex: 1943)</label>
+    <input type="text" class="form-control" name="release_year" id="Year of Release" placeholder="ex: 1943" </input>
+</div>
+
+  <button type="submit" class="btn btn-default">Submit Movie</button>
+</form>

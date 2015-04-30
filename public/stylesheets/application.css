@@ -1,0 +1,100 @@
+/* 1.1 Sign Up CSS */
+
+.wrapper-all {
+	text-align: center;
+	background-color: ffde00;
+	max-width: 800px;
+	/*border: 1px solid black;*/
+	margin: auto;
+}
+
+.centered-copy {
+	color: #522508;
+  	font-size: 20px;
+  	font-family: fantasy;
+  	margin-bottom: 45px;
+}
+
+.wrapper-section1 {
+  	text-align: center;
+	border: 3px solid #522508;
+	max-width: 50%;
+	display: inline-block;
+}
+
+.left {
+	float: left;
+	width: 30%;
+	display: inline-block;
+	margin-top: 25%;
+	margin-bottom: 0;
+	text-align: left;
+	padding-left: 2.5em;
+  	color: #522508;
+} 
+
+.form-signup {
+
+ 	text-align: right;
+	border: 3px solid #522508;
+	max-width: 50%;
+	display: inline-block;
+}
+
+.inner-form { 
+	border: none;
+  	max-width: 50%;
+  	text-align: left;
+  	display: inline-block;
+  	padding: 10 0 10 0;
+}
+
+/* 1.2 Login CSS */
+
+.login-wrapper {
+	background-color: ffde00;
+  	max-width: 320px;
+  	text-align: center;
+}
+
+.login-form {
+	text-align: center;
+	
+}
+
+.login-fieldset {
+	text-align: right;
+	border: 3px solid #522508;
+	margin-bottom: 1em;
+}
+.submit {
+	border: 1px solid #522508;
+	  color: #522508;
+	  font-family: fantasy;
+	  background-color: inherit;
+	  margin-bottom: .5em;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 1.4 Profile CSS */
+
+.profile-pic {
+	border: 1px solid #522508;
+	height: 45px;
+	width: 50px;
+}
+
+/* 1.5 Universal CSS */
+
+label, input { 
+  margin: 10px;
+
+}
+
+label {
+	font-family: fantasy;
+	color: #522508;
+}

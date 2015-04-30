@@ -2,7 +2,7 @@ class AddForeignKeys < ActiveRecord::Migration
     def change
         change_table :reviews do |t|
             t.references :user
-            t.references :movies
+            t.references :movie
         end
     end
 end
