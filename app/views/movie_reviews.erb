@@ -1,6 +1,22 @@
  <div> 
-    List of Associated Reviews
-
+    <p>List of Associated Reviews</p>
+    <% @reviews.each do |r| %>
+        
+    <ul>
+      <li>
+        Review Title
+      </li>
+      <li>
+        <%= r.rating %>
+      </li>
+      <li>
+        <%= r.text %>
+      </li>
+      <li>
+        Username of reviewer
+      </li>
+    </ul>
+<% end %>
  </div> 
 
 

@@ -1,0 +1,19 @@
+<!--
+  1. Login
+  2. Logout
+  3. Search movies
+  4. Show's who's logged in
+ -->
+<p>
+<% if current_user %>
+  This current user is <%= current_user.username %>
+<% else %>
+  No one is logged in!
+<% end %>
+</p>
+<%= erb(:login, layout: false) %>
+
+<hr>
+ 
+
+

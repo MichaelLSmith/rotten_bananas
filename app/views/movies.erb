@@ -1,8 +1,10 @@
-<ul>
   <% @movies.each do |m| %>
+<ul>
   <li> 
-   <a href="/movie/<%= "#{m.id}" %>"><%= "#{m.title}" %></a> 
+   <a href="/movies/<%= "#{m.id}" %>"><%= "#{m.title}" %></a> 
   </li>
 </ul>
+
+
 <% end %>
 

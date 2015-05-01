@@ -10,15 +10,26 @@ post '/movies/:movie_id/reviews/new' do
 
   @review = Review.create rating: rating, text: text, user_id: current_user.id, movie_id: params[:movie_id]
 
-  redirect "/movie/#{params[:movie_id]}"
+  redirect "/movies/#{params[:movie_id]}"
 end
 
 get '/movies/:movie_id/reviews' do # embedded on: display single movie
-  movie = Movie.find(params[:id])
-  @reviews = movie.reviews
+  @movie = Movie.find(params[:movie_id])
+  @reviews = @movie.reviews
   # display a list of all reviews associated with @movie
 
   erb :movie_reviews
+end
+
+get '/movies/:movie_id' do # Display single movie: contains new_review and review_list
+  @movie = Movie.find(params[:movie_id])
+  @reviews = @movie.reviews
+  erb :movie
+end
+
+get '/movies' do # list of all movies (possible limit of number)
+  @movies = Movie.all
+  erb :movies
 end
 
 get '/new/movie' do # New Movie Pair
@@ -42,21 +53,6 @@ post '/new_movie' do
       redirect '/'
 end # New Movie pair end
 
-get '/movies' do # list of all movies (possible limit of number)
-  @movies = Movie.all
-  erb :movies
-end
-
-get '/movie/:id' do # Display single movie: contains new_review and review_list
-  @movie = Movie.find(params[:id])
-  erb :movie
-end
-
-# Homepage (Root path)
-get '/' do
-  erb :index
-end
-
 get '/login' do # Login Pair
   erb :login
 end
@@ -65,7 +61,7 @@ post '/login' do
   email = params[:email]
   password = params[:password]
 
-  # binding.pry
+#   # binding.pry
 
   user = User.find_by(email: email)
   if user && user.password == password
@@ -96,7 +92,15 @@ post '/signup' do
       session[:user_id] = user.id
       redirect '/'
 end
-    end # Sign up pair - end
+   end # Sign up pair - end
+
+
+
+# Homepage (Root path)
+get '/' do
+  redirect 'movies'
+end
+
 
 # /user/new
 # @user= User.new #empty user not saved to db
@@ -112,11 +116,3 @@ end
 # get '/profile' do
 #   erb :profile
 # end
-
-
-
-
-
-
-
-
